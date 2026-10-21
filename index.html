@@ -3,39 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手</title>
-<meta name="description" content="ChinAI3 Windows 移植版：同一套界面与内核，Edge WebView2 原生外壳、aim.exe 引擎、Windows 截图认字与桌面控制。内嵌 Node / Python，离线安装，免管理员 MSI。">
+<title>Aaim · Windows 版 —— 把大部分软件操作交给 AI</title>
+<meta name="description" content="Aaim 是常驻 Windows 桌面的 AI 助手：用 MCP + Shell + GUI + API 四层控制替你操作软件，接掉文档、表格、浏览器、文件与日常流程里的重复活。快、省、轻，数据留在本机，三步装好。">
 <link rel="canonical" href="https://lugui906.github.io/aaimw/">
 <meta name="theme-color" content="#f2f6fc">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="ChinAI3">
+<meta property="og:site_name" content="Aaim">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:title" content="ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手">
-<meta property="og:description" content="会聊天，更会帮你动手的桌面 AI 助手。WebView2 外壳、aim.exe 引擎、截图认字、桌面控制、长期记忆与日程；内嵌运行时，离线安装，免管理员。">
+<meta property="og:title" content="Aaim · Windows 版 —— 把大部分软件操作交给 AI">
+<meta property="og:description" content="MCP + Shell + GUI + API 四层控制，替你做掉大部分重复软件操作。快、省、轻，数据留本机。">
 <meta property="og:url" content="https://lugui906.github.io/aaimw/">
 <meta property="og:image" content="https://lugui906.github.io/aaimw/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ChinAI3 Windows 版：会聊天，更会帮你动手的桌面 AI 助手">
+<meta property="og:image:alt" content="Aaim Windows 版：大多数软件操作，交给 Aaim">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手">
-<meta name="twitter:description" content="WebView2 外壳、aim.exe 引擎、截图认字、桌面控制、长期记忆与日程；内嵌运行时，离线安装，免管理员。">
+<meta name="twitter:title" content="Aaim · Windows 版 —— 把大部分软件操作交给 AI">
+<meta name="twitter:description" content="MCP + Shell + GUI + API 四层控制，替你做掉大部分重复软件操作。快、省、轻，数据留本机。">
 <meta name="twitter:image" content="https://lugui906.github.io/aaimw/og.png">
-<link rel="icon" type="image/png" href="chinai3.png">
+<link rel="icon" type="image/png" href="aaim.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "ChinAI3",
-  "alternateName": "ChinAI3 Windows 版",
+  "name": "Aaim",
+  "alternateName": "Aaim Windows 版",
   "url": "https://lugui906.github.io/aaimw/",
-  "image": "https://lugui906.github.io/aaimw/chinai3.png",
+  "image": "https://lugui906.github.io/aaimw/aaim.png",
   "softwareVersion": "1.0.0",
   "operatingSystem": "Windows 10, Windows 11",
-  "applicationCategory": "UtilitiesApplication",
+  "applicationCategory": "BusinessApplication",
   "inLanguage": "zh-CN",
-  "description": "常驻 Windows 桌面的 AI 助手：截图认字、读取窗口上下文、桌面控制、长期记忆与 AI 日程。内嵌 Node 与 Python，离线安装，免管理员。",
-  "downloadUrl": "https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h"
+  "description": "常驻 Windows 桌面的 AI 助手：通过 MCP、Shell、GUI 与 API 多层控制代替人工操作软件，覆盖文档、表格、浏览器、文件与日常流程。快、省、轻，数据保存在本机。",
+  "downloadUrl": "https://lugui906.github.io/aaimw/#download"
 }
 </script>
 <style>
@@ -80,9 +80,10 @@ nav b{font-size:17px;letter-spacing:.3px}
 nav b span{color:var(--muted);font-weight:500}
 nav .links{margin-left:auto;display:flex;gap:20px;font-size:14px;color:var(--muted);align-items:center}
 nav .links a:hover{color:var(--txt)}
-nav .links a.mini{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;padding:8px 16px;border-radius:10px;font-weight:600}
+nav .links a.mini{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;padding:8px 16px;border-radius:10px;font-weight:600}
 nav .links a.mini:hover{color:#fff;box-shadow:0 8px 18px rgba(30,136,229,.28)}
-@media(max-width:760px){nav .links a.opt{display:none}}
+nav .links a.mini .i{width:15px;height:15px}
+@media(max-width:820px){nav .links a.opt{display:none}}
 
 .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;padding:11px 20px;border-radius:12px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.2s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(30,136,229,.35);color:#fff}
@@ -98,7 +99,7 @@ nav .links a.mini:hover{color:#fff;box-shadow:0 8px 18px rgba(30,136,229,.28)}
 .hero .badge .i{width:15px;height:15px}
 .hero h1{font-size:clamp(31px,5.5vw,53px);line-height:1.16;font-weight:800;letter-spacing:-.6px}
 .hero h1 .grad{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{max-width:736px;margin:22px auto 0;color:var(--muted);font-size:17px}
+.hero p.lead{max-width:746px;margin:22px auto 0;color:var(--muted);font-size:17px}
 .hero .cta{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap}
 .hero .meta{display:flex;gap:34px;justify-content:center;margin-top:42px;flex-wrap:wrap}
 .hero .meta div{font-size:13px;color:var(--muted)}
@@ -117,11 +118,13 @@ nav .links a.mini:hover{color:#fff;box-shadow:0 8px 18px rgba(30,136,229,.28)}
 .win .bub.ai b{color:var(--accent-d)}
 .win .mini{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px}
 .win .mini span{font-size:9.5px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:2px 7px;border-radius:999px}
-.win .mono{font-family:var(--mono);font-size:10.5px;color:var(--accent-d);background:#eef4ff;border:1px solid var(--line);border-radius:7px;padding:5px 8px;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.win .stat{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding:3px 0;border-bottom:1px dashed var(--line2)}
-.win .stat:last-child{border-bottom:0}
-.win .stat b{color:var(--good);font-weight:600}
-.win.w1{left:4px;top:160px}.win.w2{right:-8px;bottom:96px;animation-delay:-3s;width:228px}
+.win .w2-title{font-size:12px;font-weight:700;margin-bottom:9px}
+.win .task{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--muted);padding:3px 0;border-bottom:1px dashed var(--line2)}
+.win .task:last-of-type{border-bottom:0}
+.win .task .i{width:13px;height:13px;color:var(--good)}
+.win .win-foot{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--accent-d);background:#eef4ff;border:1px solid var(--line);border-radius:7px;padding:5px 8px;margin-top:7px}
+.win .win-foot .i{width:12px;height:12px}
+.win.w1{left:4px;top:160px}.win.w2{right:10px;bottom:96px;animation-delay:-3s;width:232px}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 @media(max-width:1180px){.win{display:none}}
 @media(max-width:620px){
@@ -133,9 +136,9 @@ nav .links a.mini:hover{color:#fff;box-shadow:0 8px 18px rgba(30,136,229,.28)}
 section{padding:64px 0}
 .sec-head{text-align:center;margin-bottom:44px}
 .sec-head .k{color:var(--accent2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
-.sec-head h2{font-size:clamp(25px,4vw,38px);font-weight:800;margin-top:8px}
-.sec-head p{color:var(--muted);margin-top:10px;max-width:680px;margin-inline:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:18px}
+.sec-head h2{font-size:clamp(25px,4vw,38px);font-weight:800;margin-top:8px;letter-spacing:-.3px}
+.sec-head p{color:var(--muted);margin-top:10px;max-width:700px;margin-inline:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s;position:relative;overflow:hidden;box-shadow:var(--sh-sm)}
 .card:hover{transform:translateY(-4px);border-color:rgba(30,136,229,.45);box-shadow:var(--sh)}
 .card .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;margin-bottom:14px;color:var(--accent-d);background:linear-gradient(135deg,#e8f2ff,#e6f8fc);border:1px solid rgba(30,136,229,.22)}
@@ -144,91 +147,53 @@ section{padding:64px 0}
 .card p{font-size:13.5px;color:var(--muted)}
 .card .tag{position:absolute;top:16px;right:16px;font-size:11px;background:#e7f8f0;color:var(--good);padding:3px 9px;border-radius:999px;border:1px solid rgba(15,157,105,.25);font-weight:600}
 .card .tag.b{background:#eaf2ff;color:var(--accent-d);border-color:rgba(30,136,229,.25)}
-.card ul{list-style:none;margin-top:8px}
-.card ul li{font-size:13px;color:var(--muted);padding-left:16px;position:relative;margin-top:4px}
-.card ul li::before{content:"";position:absolute;left:4px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent2)}
-.card code{font-size:12px;background:#eef4ff;border:1px solid var(--line);border-radius:5px;padding:1px 5px;color:var(--accent-d)}
 
-/* 移植 */
-.port-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;align-items:start}
-@media(max-width:960px){.port-grid{grid-template-columns:1fr}}
-.map{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:8px 18px;box-shadow:var(--sh-sm)}
-.map-row{display:grid;grid-template-columns:1fr 26px 1.06fr;gap:6px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line2);font-size:13px}
-.map-row:last-child{border-bottom:0}
-.map-row .old{color:var(--muted);font-family:var(--mono);font-size:11.5px;text-align:right;overflow-wrap:anywhere}
-.map-row .ar{color:var(--accent2);text-align:center;font-weight:700}
-.map-row .new{color:var(--txt);font-weight:600;overflow-wrap:anywhere}
-.map-row .new span{font-weight:400;color:var(--muted);font-size:11.5px}
-.map-row .new code{font-weight:400;font-size:11.5px}
+/* 四层控制 */
+#layers{padding-top:26px}
+.layers-panel{position:relative;overflow:hidden;background:linear-gradient(155deg,#0e1d30,#132c49 62%,#0f2a45);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:46px;box-shadow:0 30px 70px rgba(15,30,49,.28)}
+.layers-panel::before{content:"";position:absolute;width:520px;height:520px;right:-160px;top:-230px;border-radius:50%;background:radial-gradient(circle,rgba(73,182,255,.23),transparent 68%);pointer-events:none}
+.layers-panel::after{content:"";position:absolute;width:420px;height:420px;left:-170px;bottom:-240px;border-radius:50%;background:radial-gradient(circle,rgba(0,210,200,.16),transparent 68%);pointer-events:none}
+.layers-panel .sec-head{position:relative;z-index:1;margin-bottom:34px}
+.layers-panel .sec-head .k{color:#5fd0e0}
+.layers-panel .sec-head h2{color:#fff}
+.layers-panel .sec-head p{color:#a9c1d9;max-width:820px}
+.layer-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.layer{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px;transition:.25s}
+.layer:hover{background:rgba(255,255,255,.09);border-color:rgba(95,208,224,.45);transform:translateY(-3px)}
+.layer .ltag{font-family:var(--mono);font-size:10.5px;letter-spacing:1.6px;color:#5fd0e0;font-weight:700}
+.layer h3{font-size:16px;color:#fff;margin:7px 0 7px;font-weight:700}
+.layer p{font-size:12.8px;color:#a9c1d9;line-height:1.65}
+.layer-foot{position:relative;z-index:1;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:13px;color:#8fa9c3}
+.layer-foot b{color:#dcecff;font-weight:600}
+@media(max-width:980px){.layer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.layers-panel{padding:28px 20px;border-radius:20px}.layer-grid{grid-template-columns:1fr}}
 
-.term{background:#0f1e31;border:1px solid rgba(15,30,49,.9);border-radius:var(--r);box-shadow:0 18px 40px rgba(15,30,49,.22);overflow:hidden;position:sticky;top:84px}
-.term .tbar{display:flex;gap:6px;align-items:center;padding:11px 14px;background:rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.07)}
-.term .tbar i{width:9px;height:9px;border-radius:50%}
-.term .tbar i:nth-child(1){background:#ff5f57}.term .tbar i:nth-child(2){background:#febc2e}.term .tbar i:nth-child(3){background:#28c840}
-.term .tbar span{margin-left:6px;font-family:var(--mono);font-size:10.5px;color:#7f9ab8}
-.term pre{padding:16px 18px 18px;overflow-x:auto;font-family:var(--mono);font-size:11.5px;line-height:1.85;color:#c7d8ec;tab-size:2}
-.term .p{color:#63b3ff}
-.term .d{color:#6fd3e0}
-.term .ok{color:#5fe0a6}
-.term .w{color:#f0c674}
-.term .cm{color:#6b86a5}
-.trip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
-@media(max-width:820px){.trip{grid-template-columns:1fr}}
-.trip .t{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--sh-sm)}
-.trip .t .i{width:19px;height:19px;color:var(--accent-d);margin-top:2px}
-.trip .t b{display:block;font-size:13.5px}
-.trip .t span{font-size:12px;color:var(--muted);line-height:1.55;display:block;margin-top:2px}
+/* 快省轻 */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--sh-sm);position:relative;overflow:hidden;transition:.25s}
+.stat:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:rgba(30,136,229,.4)}
+.stat .big{font-size:68px;line-height:1;font-weight:800;letter-spacing:-2px;background:linear-gradient(125deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat h3{font-size:17px;margin-top:16px;font-weight:700}
+.stat p{font-size:13.5px;color:var(--muted);margin-top:5px}
+@media(max-width:760px){.stats{grid-template-columns:1fr}.stat{display:flex;gap:20px;align-items:center;padding:20px 22px}.stat .big{font-size:52px;flex:none}.stat h3{margin-top:0}.stat p{margin-top:2px}}
 
-/* 场景演示 */
-.demo{border:1px solid rgba(10,162,192,.28);background:linear-gradient(160deg,#eefaff,#eef4ff);border-radius:var(--r);padding:26px;max-width:800px;margin:0 auto}
-.demo .lab{font-size:12px;letter-spacing:1px;color:var(--accent-d);text-transform:uppercase;margin-bottom:16px;font-weight:700}
-.demo .turn{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
-.demo .av{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
-.demo .av.u{background:#fff;border:1px solid var(--line);color:var(--muted)}
-.demo .bub{background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 15px;font-size:14px;flex:1;box-shadow:var(--sh-sm)}
-.demo .bub b{color:var(--accent-d)}
-.demo .bub code{font-size:12.5px;background:#eef4ff;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--accent-d)}
-.demo .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
-.demo .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:4px 11px;border-radius:999px}
-.demo .chip .i{width:13px;height:13px;color:var(--accent2)}
-
-/* 开放区 */
-.open .phrase{font-size:clamp(22px,4vw,40px);font-weight:800;text-align:center;letter-spacing:-.5px;margin-bottom:24px}
-.open .phrase span{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.open .say{max-width:780px;margin:0 auto 32px;text-align:center;color:var(--muted);font-size:16px;line-height:1.9}
-.open .say b{color:var(--txt)}
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;text-align:center;transition:.25s;box-shadow:var(--sh-sm)}
-.feat:hover{transform:translateY(-3px);border-color:rgba(30,136,229,.45);box-shadow:var(--sh)}
-.feat .big{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;margin:0 auto 12px;color:var(--accent-d);background:linear-gradient(135deg,#e8f2ff,#e6f8fc);border:1px solid rgba(30,136,229,.22)}
-.feat .big .i{width:22px;height:22px}
-.feat h4{font-size:15px;margin-bottom:4px}
-.feat p{font-size:12px;color:var(--muted)}
-
-/* 安装 */
-.install{background:linear-gradient(160deg,#ffffff,#f4f9ff);border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:var(--sh-sm)}
-.steps{display:flex;flex-direction:column;gap:12px;max-width:700px;margin:0 auto}
-.step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:14px 18px;border-radius:12px;box-shadow:var(--sh-sm)}
-.step .n{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;color:#fff;font-size:14px}
-.step .n .i{width:16px;height:16px}
-.step p{font-size:14px}
-.step code{background:#eef4ff;border:1px solid var(--line);padding:2px 8px;border-radius:6px;font-size:12.5px;color:var(--accent-d);word-break:break-all}
-.cmdbox{position:relative;max-width:700px;margin:18px auto 0;background:#0f1e31;border-radius:12px;padding:15px 52px 15px 18px;box-shadow:0 12px 28px rgba(15,30,49,.18)}
-.cmdbox pre{font-family:var(--mono);font-size:12.5px;line-height:1.9;color:#c7d8ec;overflow-x:auto}
-.cmdbox .cm{color:#6b86a5}
-.cmdbox .copy{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.1);color:#c7d8ec;border:1px solid rgba(255,255,255,.16);border-radius:7px;font-size:11px;padding:4px 9px;cursor:pointer;font-family:var(--font)}
-.cmdbox .copy:hover{background:rgba(255,255,255,.18);color:#fff}
-.note{max-width:700px;margin:16px auto 0;font-size:12.5px;color:var(--muted);text-align:center}
-.install .btns{text-align:center;margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-
-/* 规格表 */
-.row{display:flex;gap:16px;padding:13px 22px;border-bottom:1px solid var(--line2);font-size:14px;flex-wrap:wrap}
-.row:last-child{border-bottom:0}
-.row .k{width:180px;color:var(--muted);flex:none}
-.row .v{color:var(--txt);flex:1;min-width:220px}
-.row .v code{font-family:var(--mono);font-size:13px;color:var(--accent-d);overflow-wrap:anywhere}
-.spec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
-@media(max-width:560px){.row .k{width:100%}}
+/* 隐私 */
+.privacy-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:30px;align-items:center;background:linear-gradient(160deg,#fff,#f3f9ff);border:1px solid var(--line);border-radius:26px;padding:40px;box-shadow:var(--sh-sm)}
+.privacy-copy .k{color:var(--accent2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+.privacy-copy h2{font-size:clamp(25px,3.6vw,36px);font-weight:800;margin-top:8px;line-height:1.25;letter-spacing:-.3px}
+.privacy-copy p{color:var(--muted);font-size:14.5px;margin-top:14px;max-width:520px}
+.privacy-copy p.sub{font-size:13px;color:var(--accent-d);margin-top:10px}
+.privacy-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px 20px;box-shadow:var(--sh)}
+.pv-head{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--accent-d);padding:14px 0 12px;border-bottom:1px solid var(--line);letter-spacing:.5px}
+.pv-head .i{width:17px;height:17px}
+.pv-row{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dashed var(--line2)}
+.pv-row:last-child{border-bottom:0}
+.pv-ico{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#eef4ff;color:var(--accent-d);border:1px solid rgba(30,136,229,.18);flex:none}
+.pv-ico .i{width:17px;height:17px}
+.pv-row div b{display:block;font-size:13.5px;font-weight:600}
+.pv-row div span{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+.pv-ok{width:16px;height:16px;color:var(--good);margin-left:auto}
+@media(max-width:900px){.privacy-grid{grid-template-columns:1fr;padding:28px}.privacy-copy p{max-width:none}}
 
 /* 真实界面 */
 .shot{max-width:1080px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(24,58,99,.16);overflow:hidden}
@@ -242,153 +207,196 @@ section{padding:64px 0}
 .shot figcaption{font-size:12.5px;color:var(--muted);padding:12px 16px;border-top:1px solid var(--line2);text-align:center;background:#fff}
 @media(max-width:700px){.shot{border-radius:14px}.shot-bar{padding:10px 13px}.shot figcaption{padding:10px 13px;font-size:11.5px}}
 
+/* 下载 */
+.dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dl-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--sh-sm);transition:.25s}
+.dl-card:hover{border-color:rgba(30,136,229,.45);box-shadow:var(--sh)}
+.dl-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.part{font-size:11px;font-weight:700;color:var(--accent-d);background:#eaf2ff;border:1px solid rgba(30,136,229,.22);padding:3px 9px;border-radius:999px}
+.size{font-size:11.5px;color:var(--muted);font-family:var(--mono)}
+.dl-name{font-family:var(--mono);font-size:21px;font-weight:700;margin-top:13px}
+.dl-hint{font-size:12.5px;color:var(--muted);margin-top:3px}
+.dl-hint code{font-size:11.5px;color:var(--accent-d);background:#f1f6ff;border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+.dl-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--line2)}
+.pwd{font-size:12px;color:var(--muted)}
+.pwd b{font-family:var(--mono);font-size:13px;color:var(--txt);background:#eef4ff;border:1px solid var(--line);border-radius:5px;padding:2px 7px;margin-left:2px}
+.copy{background:#fff;border:1px solid var(--line);color:var(--accent-d);border-radius:6px;font-size:11.5px;padding:4px 9px;cursor:pointer;font-family:var(--font);transition:.2s}
+.copy:hover{background:#f3f9ff;border-color:rgba(30,136,229,.4)}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;margin-left:auto;background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;font-size:13px;font-weight:600;padding:8px 15px;border-radius:9px;transition:.2s}
+.dl-btn:hover{box-shadow:0 8px 18px rgba(30,136,229,.3)}
+.dl-btn .i{width:15px;height:15px}
+@media(max-width:760px){.dl-grid{grid-template-columns:1fr}}
+
+.rename{display:flex;gap:14px;align-items:flex-start;background:#fff8e8;border:1px solid #f0c674;border-radius:14px;padding:18px 20px;margin-top:18px}
+.warn-ico{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#ffeab8;color:#a35c00;flex:none}
+.warn-ico .i{width:21px;height:21px}
+.rename b{display:block;font-size:14.5px;color:#8a4b00}
+.rename p{font-size:13px;color:#7a5a2a;margin-top:5px}
+.rename p.small{font-size:12px;margin-top:6px;opacity:.9}
+.rename code{background:#fff;border:1px solid #f0d9a8;color:#8a4b00;padding:1px 6px;border-radius:5px;font-size:12px}
+@media(max-width:560px){.rename{padding:15px 15px;gap:10px}.warn-ico{width:32px;height:32px}.warn-ico .i{width:18px;height:18px}}
+
+.steps{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);padding:16px 18px;border-radius:12px;box-shadow:var(--sh-sm)}
+.step .n{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:700;color:#fff;font-size:14px}
+.step b{display:block;font-size:14.5px}
+.step p{font-size:13px;color:var(--muted);margin-top:3px}
+.step code{background:#eef4ff;border:1px solid var(--line);padding:1px 7px;border-radius:5px;font-size:12px;color:var(--accent-d);word-break:break-all}
+.note{max-width:760px;margin:20px auto 0;font-size:12.5px;color:var(--muted);text-align:center}
+
+/* 收尾 */
+.closing-sec{padding-top:10px}
+.closing{background:linear-gradient(135deg,#1e88e5,#0aa2c0);border:1px solid rgba(255,255,255,.16);border-radius:26px;padding:46px 30px;text-align:center;color:#fff;box-shadow:0 26px 56px rgba(30,136,229,.28);position:relative;overflow:hidden}
+.closing::after{content:"";position:absolute;width:380px;height:380px;right:-150px;top:-170px;border-radius:50%;background:rgba(255,255,255,.14);pointer-events:none}
+.closing h2{font-size:clamp(23px,4vw,35px);font-weight:800;letter-spacing:-.3px;position:relative;z-index:1}
+.closing p{color:rgba(255,255,255,.86);font-size:13.5px;margin-top:10px;position:relative;z-index:1}
+.closing .btn{background:#fff;color:var(--accent-d);margin-top:24px;position:relative;z-index:1;box-shadow:0 12px 26px rgba(10,60,110,.2)}
+.closing .btn:hover{color:var(--accent-d);box-shadow:0 16px 32px rgba(10,60,110,.26)}
+
 /* footer */
-footer{border-top:1px solid var(--line);margin-top:20px;padding:44px 0 34px;text-align:center;color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:26px;padding:44px 0 34px;text-align:center;color:var(--muted);font-size:13px}
 footer .socials{display:flex;gap:14px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
 footer a.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:13px;color:var(--txt);box-shadow:var(--sh-sm)}
 footer a.pill:hover{border-color:rgba(30,136,229,.5);color:var(--accent-d)}
 footer a.pill .i{width:15px;height:15px;color:var(--accent-d)}
+footer p.copyright{margin-top:8px;opacity:.7}
 </style>
 </head>
-<body>
-<a class="skip" href="#apps">跳到主要内容</a>
+<body id="top">
+<a class="skip" href="#do">跳到主要内容</a>
 <div class="bg" aria-hidden="true"><span></span></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
   <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
-  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
-  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></symbol>
-  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M3 12h18"/></symbol>
-  <symbol id="i-paperclip" viewBox="0 0 24 24"><path d="M21.4 11 12.3 20.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.9l8.5-8.5"/></symbol>
-  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
-  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
-  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
-  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5 19 4M18 9l3 3"/></symbol>
-  <symbol id="i-messages" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
-  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
-  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16l.7 1.9L21.6 19l-1.9.7L19 21.6l-.7-1.9L16.4 19l1.9-.7z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 7V2M15 7V2M6 7h12v4a6 6 0 0 1-12 0z"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m6 9 3 3-3 3M13 15h5"/></symbol>
+  <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
   <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
-  <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
-  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.1 6.3-6.3 2.1 2.1-6.3z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 21v-8"/></symbol>
-  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5 19 4M18 9l3 3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
 </svg>
 
 <nav id="topnav">
   <div class="wrap">
-    <img src="chinai3.png" alt="ChinAI3">
-    <b>ChinAI3 <span>Windows</span></b>
+    <img src="aaim.png" alt="Aaim">
+    <b>Aaim <span>Windows</span></b>
     <div class="links">
-      <a class="opt" href="#apps">应用</a>
-      <a class="opt" href="#features">能力</a>
-      <a class="opt" href="#port">移植</a>
-      <a class="opt" href="#install">安装</a>
-      <a class="mini" href="https://github.com/lugui906/aaimw" target="_blank" rel="noopener">GitHub</a>
+      <a class="opt" href="#do">能做什么</a>
+      <a class="opt" href="#layers">四层控制</a>
+      <a class="opt" href="#fast">快省轻</a>
+      <a class="opt" href="#privacy">隐私</a>
+      <a class="mini" href="#download"><svg class="i"><use href="#i-download"/></svg>下载</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="win w1" aria-hidden="true">
-    <div class="bar"><i></i><i></i><i></i><span>ChinAI3</span></div>
-    <div class="bub me">屏幕上这个报错，帮我看看，能修就顺手修了。</div>
-    <div class="bub ai"><b>已截屏认字，并读取当前窗口与最近活动……</b><br>缺一个运行库。已装好并重启程序，现在正常了。</div>
-    <div class="mini"><span>截图</span><span>OCR</span><span>读屏</span><span>动手修复</span></div>
+    <div class="bar"><i></i><i></i><i></i><span>Aaim</span></div>
+    <div class="bub me">把这份 9 月销售表按区域汇总，再画个趋势图。</div>
+    <div class="bub ai"><b>已读取表格，汇总完成。</b><br>华东 ¥182,400 · 华南 ¥156,900 · 华北 ¥121,300……趋势图放在第 2 个工作表。</div>
+    <div class="mini"><span>读文件</span><span>汇总</span><span>画图</span><span>已保存</span></div>
   </div>
   <div class="win w2" aria-hidden="true">
-    <div class="bar"><i></i><i></i><i></i><span>engine</span></div>
-    <div class="stat"><span>node</span><b>bundled</b></div>
-    <div class="stat"><span>opencode</span><b>bundled</b></div>
-    <div class="stat"><span>python 3.12</span><b>embed</b></div>
-    <div class="mono">aim.exe model switch deepseek-chat</div>
+    <div class="bar"><i></i><i></i><i></i><span>task</span></div>
+    <div class="w2-title">导出当前窗口的数据</div>
+    <div class="task"><svg class="i"><use href="#i-check"/></svg>读取当前窗口</div>
+    <div class="task"><svg class="i"><use href="#i-check"/></svg>找到「导出」按钮</div>
+    <div class="task"><svg class="i"><use href="#i-check"/></svg>选择路径并命名</div>
+    <div class="task"><svg class="i"><use href="#i-check"/></svg>检查结果</div>
+    <div class="win-foot"><svg class="i"><use href="#i-zap"/></svg>4 步 · 全自动完成</div>
   </div>
   <div class="wrap">
-    <img class="icon" src="chinai3.png" alt="ChinAI3 图标">
-    <div class="badge"><svg class="i"><use href="#i-window"/></svg>Windows 10 / 11 · WebView2 原生外壳 · 免管理员</div>
-    <h1>会聊天，更会帮你<span class="grad">动手</span>的<br>桌面 AI 助手</h1>
+    <img class="icon" src="aaim.png" alt="Aaim 图标">
+    <div class="badge"><svg class="i"><use href="#i-window"/></svg>Windows 10 / 11 · 下载即用 · 数据留本机</div>
+    <h1>大多数软件操作<br><span class="grad">交给 Aaim</span></h1>
     <p class="lead">
-      ChinAI3 的 Windows 移植版。同一套 Flask 界面与 AI 内核，换成 Edge WebView2 外壳、
-      <code>aim.exe</code> 引擎和 Windows 原生能力：截图认字、读窗口、动手操作、长期记忆、到点办事。装好即用。
+      Aaim 常驻桌面，能看屏幕、点按钮、跑脚本、调接口。
+      文档、表格、浏览器、文件夹里的重复操作，说一句就替你做完。
     </p>
     <div class="cta">
-      <a class="btn dl" href="https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h" target="_blank" rel="noopener"><svg class="i"><use href="#i-download"/></svg>下载安装包</a>
-      <a class="btn ghost" href="#port">看它怎么移植</a>
+      <a class="btn dl" href="#download"><svg class="i"><use href="#i-download"/></svg>下载 Aaim</a>
+      <a class="btn ghost" href="#do">看它能做什么</a>
     </div>
     <div class="meta">
-      <div><b>4</b>内置 AI 应用</div>
-      <div><b>10+</b>可接入模型厂商</div>
-      <div><b>离线</b>安装依赖全随包</div>
-      <div><b>免管理员</b>按用户安装</div>
+      <div><b>快</b>一句话直达结果</div>
+      <div><b>省</b>少装几套软件</div>
+      <div><b>轻</b>不折腾环境</div>
+      <div><b>本机</b>数据留在电脑</div>
     </div>
-    <div class="ver">v1.0.0 · x64 · MSI / 免安装 ZIP</div>
+    <div class="ver">v1.0.0 · Windows 10 / 11（64 位）· 安装包分两个分卷</div>
   </div>
 </header>
 
-<section id="apps">
+<section id="do">
   <div class="wrap">
     <div class="sec-head">
-      <div class="k">Built-in Apps</div>
-      <h2>四个开箱即用的 AI 应用</h2>
-      <p>都在同一个界面里，切换即用。它们不只是问答——需要动手的时候，真的会动手。</p>
+      <div class="k">What It Does</div>
+      <h2>点、找、填、导、整，这些活它都能接</h2>
+      <p>不是只会聊天。Aaim 能直接操作你正在用的软件，把大部分需要手工点击的步骤接过去。</p>
     </div>
     <div class="grid">
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-chat"/></svg></div><h3>AI 助手</h3>
-        <p>通用对话：搜索、答疑、写作、分析文档，把一个任务整段交给它。</p>
-        <ul><li>写周报 / 编辑文档 / 编码 / 搜资料 快捷指令</li><li>可上传或拖入任意文件让它读取</li></ul></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-monitor"/></svg></div><h3>桌面控制</h3>
-        <p>用一句话让 AI 操作你的电脑：开应用、点按钮、填表单、截图排障。</p>
-        <ul><li>Windows 用 <code>pyautogui</code> 驱动鼠标键盘</li><li>先看当前窗口，再决定怎么动手</li></ul></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-zap"/></svg></div><h3>自动化</h3>
-        <p>把口头描述变成可执行的脚本与规则，让 AI 帮你把流程跑起来。</p>
-        <ul><li>对话生成脚本 / 规则并执行</li><li>适合批量、重复、定时类工作</li></ul></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-calendar"/></svg></div><h3>日程</h3>
-        <p>用自然语言安排当天任务，条件一到自动执行，不用自己盯时间。</p>
-        <ul><li>每天定点 / Cron / 打开某应用时触发</li><li>到点由 AI 自动执行</li></ul></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-table"/></svg></div><h3>Excel 与报表</h3>
+        <p>汇总、清洗、透视、画图，按你的口径直接出结果，不用一格一格复制粘贴。</p></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-file"/></svg></div><h3>Word 与 PPT</h3>
+        <p>批量替换、统一格式、生成初稿，改完直接交付，不怕文件多。</p></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-globe"/></svg></div><h3>浏览器</h3>
+        <p>查资料、比价格、填表单，把网页上的数据整理成表，省掉来回切换。</p></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-folder"/></svg></div><h3>文件与文件夹</h3>
+        <p>批量重命名、按规则归档、查找、转换格式，几分钟的活交给它。</p></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-monitor"/></svg></div><h3>日常软件</h3>
+        <p>打开应用、点按钮、填表单、导出数据，像人一样操作，不需要软件提供接口。</p></div>
+      <div class="card"><div class="ico"><svg class="i"><use href="#i-clock"/></svg></div><h3>定时与重复</h3>
+        <p>每天汇总、每周导出、每月归档，到点自动跑，不用自己盯着。</p></div>
     </div>
   </div>
 </section>
 
-<section id="features">
+<section id="layers">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="k">Features</div>
-      <h2>它都能帮你做什么</h2>
-      <p>围绕「让 AI 真正懂你、替你做」设计的一整套能力，Windows 上该有的都有。</p>
-    </div>
-    <div class="grid">
-      <div class="card"><span class="tag">截图</span><div class="ico"><svg class="i"><use href="#i-camera"/></svg></div><h3>截图提问 · 认字</h3>
-        <p>一键截全屏，用系统自带 <code>Windows.Media.Ocr</code> 识别文字（语言包缺失时回退 tesseract），直接随问题发给 AI；也能粘贴剪贴板里的图片。</p></div>
-      <div class="card"><span class="tag">读屏</span><div class="ico"><svg class="i"><use href="#i-scan"/></svg></div><h3>读取窗口上下文</h3>
-        <p>先把当前前台窗口与最近活动交给 AI，再回答或动手，少解释很多。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-paperclip"/></svg></div><h3>上传任意文件</h3>
-        <p>文档、表格、代码、日志都行。AI 拿到文件后自行读取、分析、总结。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-volume"/></svg></div><h3>一键朗读</h3>
-        <p>任意一条回复点一下就用 Windows SAPI 读出来，可随时停止，适合边做事边听。</p></div>
-      <div class="card"><span class="tag">记忆</span><div class="ico"><svg class="i"><use href="#i-cpu"/></svg></div><h3>AI 记忆</h3>
-        <p>随包 opencode 记忆插件提供 <code>remember</code> / <code>forget</code> / <code>memories</code>；记住你的习惯、职业、常用软件，可每天 / 每周 / 每月 / 每季自动更新。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-clock"/></svg></div><h3>活动记录 · 附加上下文</h3>
-        <p>用 Win32 采集前台窗口与最近文件，提问时按需带上最近 5 分钟到一整天的活动，让回答更贴你的场景。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-sliders"/></svg></div><h3>模型随你挑</h3>
-        <p>自动检测可用模型并记住你的选择；deepseek、openai、anthropic、google、groq、xai 等厂商一键接入。</p></div>
-      <div class="card"><span class="tag b">本机保存</span><div class="ico"><svg class="i"><use href="#i-key"/></svg></div><h3>API Key 管理</h3>
-        <p>在设置里添加、查看（脱敏）、删除各厂商 Key，只保存在本机，随请求才发出。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-messages"/></svg></div><h3>多会话管理</h3>
-        <p>新建、切换、连续追问，一个话题一个会话，随时回到之前的上下文继续。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-search"/></svg></div><h3>历史搜索 · 收藏</h3>
-        <p>搜索所有历史对话里的消息，把重要的收藏起来；还能多选批量复制或删除。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-grid"/></svg></div><h3>系统 AI 应用一览</h3>
-        <p>把系统里其它的 AI 应用集中列出，在 ChinAI3 里直接打开，不用到处找。</p></div>
-      <div class="card"><div class="ico"><svg class="i"><use href="#i-sparkle"/></svg></div><h3>更像人的对话</h3>
-        <p>简洁气泡 + 清爽界面常驻桌面，随时呼出，不问也能待命。</p></div>
+    <div class="layers-panel">
+      <div class="sec-head">
+        <div class="k">Control</div>
+        <h2>四层控制，总有一层能落到实处</h2>
+        <p>MCP + Shell + GUI + API 协同：同一件事的四条路径，能调就调，能点就点。</p>
+      </div>
+      <div class="layer-grid">
+        <div class="layer">
+          <div class="ltag">01 · MCP</div>
+          <h3>接入工具</h3>
+          <p>把标准工具和外部服务接进来，需要什么能力就扩展什么。</p>
+        </div>
+        <div class="layer">
+          <div class="ltag">02 · SHELL</div>
+          <h3>命令与脚本</h3>
+          <p>直接执行命令和脚本，批量处理、格式转换一步到位。</p>
+        </div>
+        <div class="layer">
+          <div class="ltag">03 · GUI</div>
+          <h3>像人一样点</h3>
+          <p>看屏幕、点按钮、填表单，能用鼠标的软件都能操作。</p>
+        </div>
+        <div class="layer">
+          <div class="ltag">04 · API</div>
+          <h3>系统与接口</h3>
+          <p>调用接口、读写数据，把几个系统串成一条流程。</p>
+        </div>
+      </div>
+      <div class="layer-foot">该用哪层，由 Aaim 自己判断。<b>一层走不通，就换一层。</b></div>
     </div>
   </div>
 </section>
@@ -398,145 +406,105 @@ footer a.pill .i{width:15px;height:15px;color:var(--accent-d)}
     <div class="sec-head">
       <div class="k">Interface</div>
       <h2>装好之后，长这样</h2>
-      <p>左侧是 AI 应用与历史记录，右侧直接对话。同一套 Web UI，Windows 上由 WebView2 承载。</p>
+      <p>左侧是历史记录，右侧直接说事。界面干净，不挡你干活。</p>
     </div>
     <figure class="shot">
-      <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><em>ChinAI3 · Windows</em></div>
-      <a href="ui.png" target="_blank" rel="noopener" title="查看原尺寸截图"><img src="ui.png" width="1440" height="900" alt="ChinAI3 主界面：左侧是 AI 助手、桌面控制、自动化、日程与历史记录，右侧演示了一段把窗口数据导出为 Excel 并添加每周日程的对话"></a>
-      <figcaption>主界面 · 演示对话；实际内容取决于你接入的模型与本机数据</figcaption>
+      <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><em>Aaim · Windows</em></div>
+      <a href="ui.png" target="_blank" rel="noopener" title="查看原尺寸截图"><img src="ui.png" width="1440" height="900" alt="Aaim 主界面：左侧是历史记录，右侧演示了一段把 9 月销售表按区域汇总并生成图表的对话"></a>
+      <figcaption>界面示意 · 演示对话；实际结果取决于你接入的模型与本机文件</figcaption>
     </figure>
   </div>
 </section>
 
-<section id="port">
+<section id="fast">
   <div class="wrap">
     <div class="sec-head">
-      <div class="k">The Windows Port</div>
-      <h2>不是套壳，是一次真正的移植</h2>
-      <p>界面与内核完全复用 Linux 版；重写的是外壳，以及每一项 Windows 原生能力。</p>
+      <div class="k">Fast · Save · Light</div>
+      <h2>快、省、轻，才是日常工具该有的样子</h2>
+      <p>不是多一个要伺候的软件，而是少干一堆重复活。</p>
     </div>
-    <div class="port-grid">
-      <div class="map" aria-label="Linux 到 Windows 的对应关系">
-        <div class="map-row"><div class="old">GTK4 + WebKit6</div><div class="ar">→</div><div class="new">Edge WebView2 <span>pywebview 外壳</span></div></div>
-        <div class="map-row"><div class="old">Flask Web UI</div><div class="ar">→</div><div class="new">原样复用 <span>templates/ + static/</span></div></div>
-        <div class="map-row"><div class="old">aim（Linux ELF）</div><div class="ar">→</div><div class="new">aim.exe <span>Go 交叉编译 amd64 / arm64</span></div></div>
-        <div class="map-row"><div class="old">opencode2 依赖</div><div class="ar">→</div><div class="new">内嵌 Node + opencode <span>engine\</span></div></div>
-        <div class="map-row"><div class="old">AT-SPI / tine</div><div class="ar">→</div><div class="new">Win32 窗口上下文 <span>+ pyautogui 动手</span></div></div>
-        <div class="map-row"><div class="old">gnome-screenshot</div><div class="ar">→</div><div class="new">System.Drawing + WinRT OCR</div></div>
-        <div class="map-row"><div class="old">GNOME 活动记录</div><div class="ar">→</div><div class="new">前台窗口 + 最近文件 <span>activity_win.py</span></div></div>
-        <div class="map-row"><div class="old">spd-say / espeak</div><div class="ar">→</div><div class="new">Windows SAPI 朗读</div></div>
-        <div class="map-row"><div class="old">/proc 枚举</div><div class="ar">→</div><div class="new">taskkill /F /T /PID</div></div>
-        <div class="map-row"><div class="old">AF_UNIX bridge</div><div class="ar">→</div><div class="new">Temp socket <span>或 127.0.0.1:47653 TCP</span></div></div>
-      </div>
-      <div class="term" aria-label="构建输出示例">
-        <div class="tbar"><i></i><i></i><i></i><span>build · chinai3-win</span></div>
-        <pre><code><span class="cm"># Linux 侧交叉构建免安装包</span>
-<span class="p">$</span> ./build-win.sh 1.0.0
-<span class="d">→</span> vendor/python-3.12.7-embed-amd64.zip
-<span class="d">→</span> wheels-amd64/*.whl  flask requests pywebview
-<span class="d">→</span> bin/aim.exe  GOOS=windows GOARCH=amd64
-<span class="d">→</span> engine/node + engine/opencode
-<span class="ok">✓</span> dist/chinai3-win-1.0.0.zip
-
-<span class="cm"># Windows 侧一键出 MSI</span>
-<span class="p">PS&gt;</span> build-msi.cmd
-<span class="d">→</span> heat 采集目录树
-<span class="d">→</span> candle 编译 · light 链接
-<span class="ok">✓</span> dist/chinai3-1.0.0-x64.msi
-   <span class="w">按用户安装 · 免管理员 · 离线 payload</span></code></pre>
-      </div>
-    </div>
-    <div class="trip">
-      <div class="t"><svg class="i"><use href="#i-box"/></svg><div><b>vendor/ 离线安装</b><span>嵌入式 Python 3.12 + 全部 wheel 随包，目标机不用装 Python。</span></div></div>
-      <div class="t"><svg class="i"><use href="#i-cpu"/></svg><div><b>engine/ 内嵌引擎</b><span>Node 运行时与 opencode 一起打包，不依赖 npm，也不用联网。</span></div></div>
-      <div class="t"><svg class="i"><use href="#i-shield"/></svg><div><b>WiX 3.11 便携打包</b><span>打包同样不要管理员；内网可用本地 WiX，全程离线出 MSI。</span></div></div>
+    <div class="stats">
+      <div class="stat"><div class="big">快</div><h3>一句话，直接到结果</h3><p>不用在菜单里点十几层，也不用反复复制粘贴。</p></div>
+      <div class="stat"><div class="big">省</div><h3>一个顶几套工具</h3><p>少买软件、少花时间，把重复活交给它。</p></div>
+      <div class="stat"><div class="big">轻</div><h3>装好就能用</h3><p>下载、安装、填一次 Key；不折腾环境，不拖慢日常。</p></div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="privacy">
+  <div class="wrap">
+    <div class="privacy-grid">
+      <div class="privacy-copy">
+        <div class="k">Privacy</div>
+        <h2>你的工作，<br>留在你的电脑里</h2>
+        <p>配置、历史、记忆、日程和 Key 都保存在本机。只有你发起任务时，完成任务所需的内容才会发给你选择的模型。</p>
+        <p class="sub">接口也可以换成你自己的模型服务——隐私的边界，由你决定。</p>
+      </div>
+      <div class="privacy-card">
+        <div class="pv-head"><svg class="i"><use href="#i-shield"/></svg>本机优先</div>
+        <div class="pv-row"><span class="pv-ico"><svg class="i"><use href="#i-chat"/></svg></span><div><b>对话与历史</b><span>只保存在这台电脑</span></div><svg class="i pv-ok"><use href="#i-check"/></svg></div>
+        <div class="pv-row"><span class="pv-ico"><svg class="i"><use href="#i-clock"/></svg></span><div><b>记忆与日程</b><span>本机读写，随时可清</span></div><svg class="i pv-ok"><use href="#i-check"/></svg></div>
+        <div class="pv-row"><span class="pv-ico"><svg class="i"><use href="#i-key"/></svg></span><div><b>API Key</b><span>本机保存</span></div><svg class="i pv-ok"><use href="#i-check"/></svg></div>
+        <div class="pv-row"><span class="pv-ico"><svg class="i"><use href="#i-plug"/></svg></span><div><b>模型接口</b><span>可换、可自建</span></div><svg class="i pv-ok"><use href="#i-check"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
   <div class="wrap">
     <div class="sec-head">
-      <div class="k">Example</div>
-      <h2>举个例子，你就懂了</h2>
+      <div class="k">Download</div>
+      <h2>三步开工</h2>
+      <p>Windows 10 / 11（64 位）。两个分卷都要下载，安装后填一次 Key 就能用。</p>
     </div>
-    <div class="demo">
-      <div class="lab">一次典型的使用</div>
-      <div class="turn">
-        <div class="av u">你</div>
-        <div class="bub">帮我把这个窗口里 9 月的数据导成 Excel，放到桌面。</div>
+    <div class="dl-grid">
+      <div class="dl-card">
+        <div class="dl-head"><span class="part">分卷 1</span><span class="size">约 99 MB</span></div>
+        <div class="dl-name">Aaim1.zip</div>
+        <p class="dl-hint">下载后重命名为 <code>Aaim.z01</code></p>
+        <div class="dl-actions">
+          <span class="pwd">密码 <b>5adm</b></span>
+          <button class="copy" type="button" data-copy="5adm" data-label="复制密码">复制密码</button>
+          <a class="dl-btn" href="https://wwaye.lanzoue.com/inYS24cw1k3i" target="_blank" rel="noopener">下载<svg class="i"><use href="#i-download"/></svg></a>
+        </div>
       </div>
-      <div class="turn">
-        <div class="av">C</div>
-        <div class="bub"><b>已截屏认字，读到工具栏里的「导出」按钮，也看了当前窗口和最近的活动……</b><br>
-          点了「导出 → 当前视图」，在保存框里选了桌面，文件名填 <code>9月数据.xlsx</code>。文件已生成，共 128 行。</div>
-      </div>
-      <div class="chips">
-        <span class="chip"><svg class="i"><use href="#i-camera"/></svg>截图 + 认字</span>
-        <span class="chip"><svg class="i"><use href="#i-scan"/></svg>窗口上下文</span>
-        <span class="chip"><svg class="i"><use href="#i-monitor"/></svg>桌面控制</span>
-        <span class="chip"><svg class="i"><use href="#i-clock"/></svg>活动记录</span>
+      <div class="dl-card">
+        <div class="dl-head"><span class="part">分卷 2</span><span class="size">约 85 MB</span></div>
+        <div class="dl-name">Aaim2.zip</div>
+        <p class="dl-hint">保持原名，解压这个文件</p>
+        <div class="dl-actions">
+          <span class="pwd">密码 <b>40oa</b></span>
+          <button class="copy" type="button" data-copy="40oa" data-label="复制密码">复制密码</button>
+          <a class="dl-btn" href="https://wwaye.lanzoue.com/ixyAL4cw0dre" target="_blank" rel="noopener">下载<svg class="i"><use href="#i-download"/></svg></a>
+        </div>
       </div>
     </div>
+
+    <div class="rename">
+      <div class="warn-ico"><svg class="i"><use href="#i-warn"/></svg></div>
+      <div>
+        <b>重要：把 Aaim1.zip 重命名为 Aaim.z01</b>
+        <p>两个文件放在同一个文件夹。把 <code>Aaim1.zip</code> 改名为 <code>Aaim.z01</code>，保持 <code>Aaim2.zip</code> 不变，然后解压 <code>Aaim2.zip</code>。</p>
+        <p class="small">如果看不到扩展名，先在资源管理器里打开「文件扩展名」，确保最终文件名是 <code>Aaim.z01</code>，而不是 <code>Aaim.z01.zip</code>。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><b>下载两个分卷</b><p>上面的 Aaim1.zip 和 Aaim2.zip 都要下载，密码分别是 <code>5adm</code> 和 <code>40oa</code>。</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>改名、解压</b><p>Aaim1.zip → Aaim.z01；解压 Aaim2.zip，得到 <code>aaim-1.0.0-x64.msi</code>。</p></div></div>
+      <div class="step"><div class="n">3</div><div><b>安装、填 Key</b><p>双击安装包，启动 Aaim，在设置里填接口地址和 API Key，开始用。按当前用户安装，不需要管理员权限。</p></div></div>
+    </div>
+    <p class="note">建议用 7-Zip 或 WinRAR 解压；两个分卷必须放在同一个文件夹。</p>
   </div>
 </section>
 
-<section id="open" class="open">
+<section class="closing-sec">
   <div class="wrap">
-    <div class="phrase">你的想法，就是<span>新功能</span></div>
-    <p class="say">框架保持开源开放，希望你能自己去探索、去组合 AI 的能力，搭出属于自己的新功能。
-      移植版也把兼容层写清楚：哪些复用、哪些重写、哪些仍有限制。就算官方还没有某个功能，只要你觉得可行，
-      都可以直接提出来，<b>风险很低</b>——很多 Windows 能力，本来就只差补一层。</p>
-    <div class="feats">
-      <div class="feat"><div class="big"><svg class="i"><use href="#i-unlock"/></svg></div><h4>框架开源开放</h4><p>源码开放，自由扩展与再创造。</p></div>
-      <div class="feat"><div class="big"><svg class="i"><use href="#i-layers"/></svg></div><h4>双平台同源</h4><p>Linux 与 Windows 共用界面与内核。</p></div>
-      <div class="feat"><div class="big"><svg class="i"><use href="#i-compass"/></svg></div><h4>移植可复现</h4><p>离线 vendor + 一键脚本，构建不靠运气。</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="install">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="k">Install</div>
-      <h2>两步装进你的桌面</h2>
-      <p>面向 Windows 10 / 11（64 位），按当前用户安装，不需要管理员权限。</p>
-    </div>
-    <div class="install">
-      <div class="steps">
-        <div class="step"><div class="n">1</div><p>前往<a href="https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h" target="_blank" rel="noopener">中国移动云盘</a>下载 <code>chinai3-1.0.0-x64.msi</code>，双击按提示完成安装（免管理员）。</p></div>
-        <div class="step"><div class="n">2</div><p>从开始菜单或桌面快捷方式启动，在「设置 → 模型 / API Key」里填好 Key，就能开始对话。</p></div>
-        <div class="step"><div class="n"><svg class="i"><use href="#i-check"/></svg></div><p>也可以下载免安装包 <code>chinai3-win-1.0.0.zip</code> 解压后直接运行；或跑 <code>install.ps1</code> 安装到当前用户目录（同一个云盘分享）。</p></div>
-      </div>
-      <div class="cmdbox">
-        <button class="copy" type="button" data-copy="msiexec /i chinai3-1.0.0-x64.msi /qn">复制</button>
-        <pre><code>msiexec /i chinai3-1.0.0-x64.msi /qn   <span class="cm">:: 静默安装</span>
-msiexec /x chinai3-1.0.0-x64.msi /qn   <span class="cm">:: 静默卸载</span></code></pre>
-      </div>
-      <p class="note">Win10 如果缺少 Edge WebView2 Runtime，请先安装系统组件；没有它时会回退到默认浏览器。</p>
-      <div class="btns">
-        <a class="btn dl" href="https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h" target="_blank" rel="noopener"><svg class="i"><use href="#i-download"/></svg>前往下载</a>
-        <a class="btn ghost" href="https://github.com/lugui906/aaimw" target="_blank" rel="noopener"><svg class="i f"><use href="#i-github"/></svg>页面仓库</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><div class="k">Release</div><h2>发行信息</h2></div>
-    <div class="spec">
-      <div class="row"><div class="k">版本</div><div class="v">1.0.0</div></div>
-      <div class="row"><div class="k">系统要求</div><div class="v">Windows 10 / 11 · 64 位（x64；arm64 需自行构建）</div></div>
-      <div class="row"><div class="k">图形外壳</div><div class="v">Edge WebView2（pywebview）；缺失时回退默认浏览器</div></div>
-      <div class="row"><div class="k">安装包</div><div class="v"><code>chinai3-1.0.0-x64.msi</code>（约 362 MB · 按用户安装，免管理员）</div></div>
-      <div class="row"><div class="k">免安装包</div><div class="v"><code>chinai3-win-1.0.0.zip</code>（约 363 MB · 解压即用）</div></div>
-      <div class="row"><div class="k">安装目录</div><div class="v"><code>%LOCALAPPDATA%\Programs\ChinAI3</code></div></div>
-      <div class="row"><div class="k">内置引擎</div><div class="v">Node 运行时 + opencode 装在 <code>engine\</code>，目标机不用另装</div></div>
-      <div class="row"><div class="k">安装依赖</div><div class="v">嵌入式 Python 3.12 + wheel 在 <code>vendor\</code>，全程离线</div></div>
-      <div class="row"><div class="k">下载</div><div class="v"><a href="https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h" target="_blank" rel="noopener">中国移动云盘分享（无提取码）</a></div></div>
-      <div class="row"><div class="k">卸载</div><div class="v">在「设置 → 应用」里卸载；用户目录里的记忆与配置会保留</div></div>
-      <div class="row"><div class="k">已知限制</div><div class="v">MSI 未签名，SmartScreen 需选「仍要运行」；本地语音输入暂不支持；自动化示例部分依赖 Linux 命令</div></div>
+    <div class="closing">
+      <h2>把重复操作交出去，<br>把时间留给正事</h2>
+      <p>Windows 10 / 11 · 三步装好 · 数据留本机</p>
+      <a class="btn dl" href="#download"><svg class="i"><use href="#i-download"/></svg>下载 Aaim</a>
     </div>
   </div>
 </section>
@@ -544,13 +512,12 @@ msiexec /x chinai3-1.0.0-x64.msi /qn   <span class="cm">:: 静默卸载</span></
 <footer>
   <div class="wrap">
     <div class="socials">
-      <a class="pill" href="https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h" target="_blank" rel="noopener"><svg class="i"><use href="#i-download"/></svg>云盘下载 · 无提取码</a>
+      <a class="pill" href="#download"><svg class="i"><use href="#i-download"/></svg>下载 Aaim</a>
       <a class="pill" href="https://github.com/lugui906/aaimw" target="_blank" rel="noopener"><svg class="i f"><use href="#i-github"/></svg>GitHub · lugui906/aaimw</a>
-      <a class="pill" href="https://github.com/lugui906/chinai3w" target="_blank" rel="noopener"><svg class="i"><use href="#i-window"/></svg>ChinAI3 介绍页</a>
-      <a class="pill" href="https://lugui906.github.io/tsai" target="_blank" rel="noopener"><svg class="i"><use href="#i-layers"/></svg>TSAI-AI · AI 应用集合</a>
+      <a class="pill" href="#top"><svg class="i"><use href="#i-up"/></svg>回到顶部</a>
     </div>
-    <p>ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手 · 与 TSAI-OS 同源</p>
-    <p style="margin-top:8px;opacity:.7">© <span id="y">2026</span> TSAI</p>
+    <p>Aaim · Windows 版 —— 把大部分软件操作交给 AI</p>
+    <p class="copyright">© <span id="y">2026</span> Aaim</p>
   </div>
 </footer>
 
@@ -563,6 +530,7 @@ addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), 
 document.querySelectorAll('.copy').forEach(btn => {
   btn.addEventListener('click', async () => {
     const text = btn.dataset.copy;
+    const label = btn.dataset.label || '复制';
     try {
       await navigator.clipboard.writeText(text);
       btn.textContent = '已复制';
@@ -575,7 +543,7 @@ document.querySelectorAll('.copy').forEach(btn => {
       ta.remove();
       btn.textContent = '已复制';
     }
-    setTimeout(() => { btn.textContent = '复制'; }, 1600);
+    setTimeout(() => { btn.textContent = label; }, 1600);
   });
 });
 </script>

@@ -1,30 +1,35 @@
-# ChinAI3 · Windows 版 介绍页
+# Aaim · Windows 版介绍页
 
-<https://lugui906.github.io/aaimw/>
+Aaim 的单页介绍站：常驻桌面的 AI 助手，用 MCP + Shell + GUI + API 多层控制代替大部分重复软件操作。
 
-ChinAI3 Windows 移植版的单文件落地页。版式与配色参考
-<https://lugui906.github.io/chinai3w/>，内容取自 `~/chinai3-win`：
-WebView2 外壳、`aim.exe` 引擎、截图认字、桌面控制、长期记忆、日程与离线安装。
+- 页面：<https://lugui906.github.io/aaimw/>
+- 仓库：<https://github.com/lugui906/aaimw>
 
-## 页面内容
+## 内容
 
-- 四个内置应用：AI 助手 / 桌面控制 / 自动化 / 日程
-- 12 项能力：截图认字、窗口上下文、文件上传、朗读、AI 记忆、活动记录、模型与 Key、多会话、历史收藏…
-- 移植对照：GTK4 → WebView2、`aim` → `aim.exe`、AT-SPI → Win32 + pyautogui、SAPI、`taskkill`…
-- 场景演示、安装步骤、静默安装命令与发行规格表
+- 首屏定位、能替你做什么、四层控制、快 / 省 / 轻、隐私说明
+- 真实界面示意（演示对话）
+- 分卷下载、密码与「Aaim1.zip → Aaim.z01」改名提示
+- 三步安装说明
+- Open Graph / Twitter 分享卡片、JSON-LD、404、robots、sitemap
 
-页面还包含：
+## 下载
 
-- 真实界面截图（演示对话）与「移植对照」终端示意
-- Open Graph / Twitter 分享卡片（`og.png`）、JSON-LD 结构化数据
-- 同风格的 404 页、`robots.txt` 与 `sitemap.xml`
+安装包分两个分卷，两个都要下载：
+
+| 分卷 | 文件 | 密码 | 下载 |
+|---|---|---|---|
+| 1 | `Aaim1.zip` → 改名为 `Aaim.z01` | `5adm` | <https://wwaye.lanzoue.com/inYS24cw1k3i> |
+| 2 | `Aaim2.zip`（保持原名） | `40oa` | <https://wwaye.lanzoue.com/ixyAL4cw0dre> |
+
+两个文件放在同一文件夹，把 `Aaim1.zip` 重命名为 `Aaim.z01`，再解压 `Aaim2.zip`，得到 `aaim-1.0.0-x64.msi`。
 
 ## 结构
 
 ```
 index.html    单文件页面（内联 CSS / JavaScript / SVG 图标）
-chinai3.png   应用图标，同时用作 favicon
-ui.png        主界面截图（演示对话，来自同一套 Web UI）
+aaim.png      应用图标，同时用作 favicon
+ui.png        主界面截图（演示对话）
 og.png        1200 × 630 社交分享卡片
 404.html      同风格 404
 robots.txt    抓取规则
@@ -32,22 +37,4 @@ sitemap.xml   站点地图
 .nojekyll     关闭 Jekyll，直接静态托管
 ```
 
-无构建步骤、无外部依赖。本地预览：
-
-```bash
-python3 -m http.server -d . 8000
-# http://127.0.0.1:8000
-```
-
-## 安装包
-
-安装包体积超过 GitHub 单文件 100 MB 限制，统一放在中国移动云盘（无提取码）：
-
-<https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h>
-
-- `chinai3-1.0.0-x64.msi`：按用户安装，免管理员
-- `chinai3-win-1.0.0.zip`：免安装包，解压即用
-
-## Pages
-
-`main` 分支根目录，经典 GitHub Pages 构建（Deploy from a branch）。
+直接用浏览器打开 `index.html` 即可预览，或在本目录运行 `python3 -m http.server`。
