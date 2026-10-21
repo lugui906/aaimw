@@ -13,11 +13,22 @@ WebView2 外壳、`aim.exe` 引擎、截图认字、桌面控制、长期记忆�
 - 移植对照：GTK4 → WebView2、`aim` → `aim.exe`、AT-SPI → Win32 + pyautogui、SAPI、`taskkill`…
 - 场景演示、安装步骤、静默安装命令与发行规格表
 
+页面还包含：
+
+- 真实界面截图（演示对话）与「移植对照」终端示意
+- Open Graph / Twitter 分享卡片（`og.png`）、JSON-LD 结构化数据
+- 同风格的 404 页、`robots.txt` 与 `sitemap.xml`
+
 ## 结构
 
 ```
 index.html    单文件页面（内联 CSS / JavaScript / SVG 图标）
 chinai3.png   应用图标，同时用作 favicon
+ui.png        主界面截图（演示对话，来自同一套 Web UI）
+og.png        1200 × 630 社交分享卡片
+404.html      同风格 404
+robots.txt    抓取规则
+sitemap.xml   站点地图
 .nojekyll     关闭 Jekyll，直接静态托管
 ```
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>页面走丢了 · ChinAI3 Windows 版</title>
+<link rel="icon" type="image/png" href="chinai3.png">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{min-height:100vh;display:grid;place-items:center;padding:24px;background:#f2f6fc;color:#12233a;font-family:"Noto Sans SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;line-height:1.65}
+  body::before{content:"";position:fixed;width:60vw;height:60vw;left:-15vw;top:-20vw;border-radius:50%;background:radial-gradient(circle,#8ec7ff,transparent 68%);filter:blur(90px);opacity:.5;pointer-events:none}
+  .card{position:relative;max-width:520px;width:100%;text-align:center;background:#fff;border:1px solid rgba(20,45,85,.12);border-radius:22px;padding:46px 34px;box-shadow:0 20px 50px rgba(24,58,99,.12)}
+  img{width:72px;height:72px;border-radius:18px;margin:0 auto 18px;box-shadow:0 12px 28px rgba(30,136,229,.28);display:block}
+  .code{font-family:Consolas,monospace;font-size:13px;letter-spacing:3px;color:#0aa2c0;font-weight:700}
+  h1{font-size:30px;font-weight:800;margin-top:8px;letter-spacing:-.5px}
+  p{color:#5b6f8a;font-size:14.5px;margin-top:10px}
+  .btns{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:14px;font-weight:600;padding:11px 20px;border-radius:12px;transition:.2s}
+  .primary{background:linear-gradient(135deg,#1e88e5,#0d6fb8);color:#fff;box-shadow:0 10px 24px rgba(30,136,229,.3)}
+  .primary:hover{transform:translateY(-2px)}
+  .ghost{background:#fff;border:1px solid rgba(20,45,85,.12);color:#12233a;box-shadow:0 4px 14px rgba(24,58,99,.08)}
+  .ghost:hover{color:#0d6fb8}
+  small{display:block;margin-top:24px;font-size:11.5px;color:#5b6f8a;opacity:.8}
+</style>
+</head>
+<body>
+  <main class="card">
+    <img src="chinai3.png" alt="ChinAI3">
+    <div class="code">404</div>
+    <h1>这个页面走丢了</h1>
+    <p>链接可能已经变化。回到介绍页，看看 ChinAI3 在 Windows 上能帮你做什么。</p>
+    <div class="btns">
+      <a class="primary" href="/aaimw/">回到介绍页</a>
+      <a class="ghost" href="https://github.com/lugui906/aaimw" target="_blank" rel="noopener">GitHub 仓库</a>
+    </div>
+    <small>ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手</small>
+  </main>
+</body>
+</html>

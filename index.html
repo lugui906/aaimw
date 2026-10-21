@@ -5,7 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手</title>
 <meta name="description" content="ChinAI3 Windows 移植版：同一套界面与内核，Edge WebView2 原生外壳、aim.exe 引擎、Windows 截图认字与桌面控制。内嵌 Node / Python，离线安装，免管理员 MSI。">
+<link rel="canonical" href="https://lugui906.github.io/aaimw/">
+<meta name="theme-color" content="#f2f6fc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChinAI3">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手">
+<meta property="og:description" content="会聊天，更会帮你动手的桌面 AI 助手。WebView2 外壳、aim.exe 引擎、截图认字、桌面控制、长期记忆与日程；内嵌运行时，离线安装，免管理员。">
+<meta property="og:url" content="https://lugui906.github.io/aaimw/">
+<meta property="og:image" content="https://lugui906.github.io/aaimw/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ChinAI3 Windows 版：会聊天，更会帮你动手的桌面 AI 助手">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChinAI3 · Windows 版 —— 常驻桌面的 AI 助手">
+<meta name="twitter:description" content="WebView2 外壳、aim.exe 引擎、截图认字、桌面控制、长期记忆与日程；内嵌运行时，离线安装，免管理员。">
+<meta name="twitter:image" content="https://lugui906.github.io/aaimw/og.png">
 <link rel="icon" type="image/png" href="chinai3.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChinAI3",
+  "alternateName": "ChinAI3 Windows 版",
+  "url": "https://lugui906.github.io/aaimw/",
+  "image": "https://lugui906.github.io/aaimw/chinai3.png",
+  "softwareVersion": "1.0.0",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "inLanguage": "zh-CN",
+  "description": "常驻 Windows 桌面的 AI 助手：截图认字、读取窗口上下文、桌面控制、长期记忆与 AI 日程。内嵌 Node 与 Python，离线安装，免管理员。",
+  "downloadUrl": "https://yun.139.com/shareweb/#/w/i/2ygbaWBcT140h"
+}
+</script>
 <style>
 :root{
   --bg:#f2f6fc; --bg2:#ffffff; --card:#ffffff; --card2:#f8fbff;
@@ -29,6 +61,8 @@ img{max-width:100%;display:block}
 .i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .i.f{fill:currentColor;stroke:none}
 code{font-family:var(--mono)}
+.skip{position:fixed;left:-9999px;top:12px;z-index:100;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 16px;font-size:14px;box-shadow:var(--sh)}
+.skip:focus{left:12px}
 
 /* 背景光晕 */
 .bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
@@ -196,6 +230,18 @@ section{padding:64px 0}
 .spec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-sm)}
 @media(max-width:560px){.row .k{width:100%}}
 
+/* 真实界面 */
+.shot{max-width:1080px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(24,58,99,.16);overflow:hidden}
+.shot-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#f8fbff;border-bottom:1px solid var(--line)}
+.shot-bar i{width:10px;height:10px;border-radius:50%}
+.shot-bar i:nth-child(1){background:#ff5f57}.shot-bar i:nth-child(2){background:#febc2e}.shot-bar i:nth-child(3){background:#28c840}
+.shot-bar em{margin-left:8px;font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.shot img{display:block;width:100%;height:auto}
+.shot a{display:block;cursor:zoom-in}
+.shot a:hover img{opacity:.985}
+.shot figcaption{font-size:12.5px;color:var(--muted);padding:12px 16px;border-top:1px solid var(--line2);text-align:center;background:#fff}
+@media(max-width:700px){.shot{border-radius:14px}.shot-bar{padding:10px 13px}.shot figcaption{padding:10px 13px;font-size:11.5px}}
+
 /* footer */
 footer{border-top:1px solid var(--line);margin-top:20px;padding:44px 0 34px;text-align:center;color:var(--muted);font-size:13px}
 footer .socials{display:flex;gap:14px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
@@ -205,6 +251,7 @@ footer a.pill .i{width:15px;height:15px;color:var(--accent-d)}
 </style>
 </head>
 <body>
+<a class="skip" href="#apps">跳到主要内容</a>
 <div class="bg" aria-hidden="true"><span></span></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -343,6 +390,21 @@ footer a.pill .i{width:15px;height:15px;color:var(--accent-d)}
       <div class="card"><div class="ico"><svg class="i"><use href="#i-sparkle"/></svg></div><h3>更像人的对话</h3>
         <p>简洁气泡 + 清爽界面常驻桌面，随时呼出，不问也能待命。</p></div>
     </div>
+  </div>
+</section>
+
+<section id="ui">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Interface</div>
+      <h2>装好之后，长这样</h2>
+      <p>左侧是 AI 应用与历史记录，右侧直接对话。同一套 Web UI，Windows 上由 WebView2 承载。</p>
+    </div>
+    <figure class="shot">
+      <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><em>ChinAI3 · Windows</em></div>
+      <a href="ui.png" target="_blank" rel="noopener" title="查看原尺寸截图"><img src="ui.png" width="1440" height="900" alt="ChinAI3 主界面：左侧是 AI 助手、桌面控制、自动化、日程与历史记录，右侧演示了一段把窗口数据导出为 Excel 并添加每周日程的对话"></a>
+      <figcaption>主界面 · 演示对话；实际内容取决于你接入的模型与本机数据</figcaption>
+    </figure>
   </div>
 </section>
 
