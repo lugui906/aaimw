@@ -9,20 +9,20 @@ Aaim 的单页介绍站：常驻桌面的 AI 助手，用 MCP + Shell + GUI + AP
 
 - 首屏定位、能替你做什么、四层控制、快 / 省 / 轻、隐私说明
 - 真实界面示意（演示对话）
-- 分卷下载、密码与「Aaim1.zip → Aaim.z01」改名提示
+- 分卷下载、密码与「Aaim2.zip → Aaim.z01」改名提示
 - 三步安装说明
 - Open Graph / Twitter 分享卡片、JSON-LD、404、robots、sitemap
 
 ## 下载
 
-安装包分两个分卷，两个都要下载：
+安装包由两个文件组成，两个都要下载：
 
-| 分卷 | 文件 | 密码 | 下载 |
+| 类型 | 文件 | 密码 | 下载 |
 |---|---|---|---|
-| 1 | `Aaim1.zip` → 改名为 `Aaim.z01` | `5adm` | <https://wwaye.lanzoue.com/inYS24cw1k3i> |
-| 2 | `Aaim2.zip`（保持原名） | `40oa` | <https://wwaye.lanzoue.com/ixyAL4cw0dre> |
+| 主文件 | `Aaim.zip`（保持原名） | `fnz0` | <https://wwaye.lanzoue.com/i7TOt4czzqtc> |
+| 分卷 | `Aaim2.zip` → 改名为 `Aaim.z01` | `3bz5` | <https://wwaye.lanzoue.com/i7Ewz4czzrdc> |
 
-两个文件放在同一文件夹，把 `Aaim1.zip` 重命名为 `Aaim.z01`，再解压 `Aaim2.zip`，得到 `aaim-1.0.0-x64.msi`。
+两个文件放在同一文件夹，把 `Aaim2.zip` 重命名为 `Aaim.z01`，再解压 `Aaim.zip`，得到 `aaim-1.0.0-x64.msi`。
 
 ## 结构
 
