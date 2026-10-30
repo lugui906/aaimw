@@ -22,6 +22,9 @@ Aaim 的单页介绍站：常驻桌面的 AI 助手，用 MCP + Shell + GUI + AP
 | 主文件 | `Aaim.zip`（保持原名） | `fnz0` | <https://wwaye.lanzoue.com/i7TOt4czzqtc> |
 | 分卷 | `Aaim2.zip` → 改名为 `Aaim.z01` | `3bz5` | <https://wwaye.lanzoue.com/i7Ewz4czzrdc> |
 
+蓝奏云打不开时走移动云盘备用通道：<https://yun.139.com/shareweb/#/w/i/2yA8H2ssVho6h>
+（复制链接后用手机打开「中国移动云盘」App，操作更方便。）
+
 两个文件放在同一文件夹，把 `Aaim2.zip` 重命名为 `Aaim.z01`，再解压 `Aaim.zip`，得到 `aaim-1.0.0-x64.msi`。
 
 ## 结构
