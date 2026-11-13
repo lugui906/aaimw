@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aaim · Windows 版 —— 把大部分软件操作交给 AI</title>
+<title>Aaim 全网统一版 —— Windows / Linux / 安卓 下载</title>
 <meta name="description" content="Aaim 是常驻 Windows 桌面的 AI 助手：用 MCP + Shell + GUI + API 四层控制替你操作软件，接掉文档、表格、浏览器、文件与日常流程里的重复活。快、省、轻，数据留在本机，三步装好。">
 <link rel="canonical" href="https://lugui906.github.io/aaimw/">
 <meta name="theme-color" content="#f2f6fc">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Aaim">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:title" content="Aaim · Windows 版 —— 把大部分软件操作交给 AI">
+<meta property="og:title" content="Aaim 全网统一版 —— Windows / Linux / 安卓 下载">
 <meta property="og:description" content="MCP + Shell + GUI + API 四层控制，替你做掉大部分重复软件操作。快、省、轻，数据留本机。">
 <meta property="og:url" content="https://lugui906.github.io/aaimw/">
 <meta property="og:image" content="https://lugui906.github.io/aaimw/og.png">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Aaim Windows 版：大多数软件操作，交给 Aaim">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aaim · Windows 版 —— 把大部分软件操作交给 AI">
+<meta name="twitter:title" content="Aaim 全网统一版 —— Windows / Linux / 安卓 下载">
 <meta name="twitter:description" content="MCP + Shell + GUI + API 四层控制，替你做掉大部分重复软件操作。快、省、轻，数据留本机。">
 <meta name="twitter:image" content="https://lugui906.github.io/aaimw/og.png">
 <link rel="icon" type="image/png" href="aaim.png">
@@ -30,8 +30,8 @@
   "alternateName": "Aaim Windows 版",
   "url": "https://lugui906.github.io/aaimw/",
   "image": "https://lugui906.github.io/aaimw/aaim.png",
-  "softwareVersion": "1.0.0",
-  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "1.0.1113.2336",
+  "operatingSystem": "Windows 10, Windows 11, Linux, Android",
   "applicationCategory": "BusinessApplication",
   "inLanguage": "zh-CN",
   "description": "常驻 Windows 桌面的 AI 助手：通过 MCP、Shell、GUI 与 API 多层控制代替人工操作软件，覆盖文档、表格、浏览器、文件与日常流程。快、省、轻，数据保存在本机。",
@@ -208,6 +208,11 @@ section{padding:64px 0}
 @media(max-width:700px){.shot{border-radius:14px}.shot-bar{padding:10px 13px}.shot figcaption{padding:10px 13px;font-size:11.5px}}
 
 /* 下载 */
+.platrow{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.platrow a,.platrow .cur{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);box-shadow:var(--sh-sm);transition:.2s}
+.platrow a:hover{color:var(--txt);transform:translateY(-1px);border-color:rgba(30,136,229,.45)}
+.platrow .cur{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;border-color:transparent;font-weight:600}
+.platrow .i{width:15px;height:15px}
 .dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .dl-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--sh-sm);transition:.25s}
 .dl-card:hover{border-color:rgba(30,136,229,.45);box-shadow:var(--sh)}
@@ -290,6 +295,7 @@ footer p.copyright{margin-top:8px;opacity:.7}
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
   <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 7V2M15 7V2M6 7h12v4a6 6 0 0 1-12 0z"/></symbol>
   <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m6 9 3 3-3 3M13 15h5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.5h2"/></symbol>
   <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 2v6"/></symbol>
   <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></symbol>
@@ -307,7 +313,7 @@ footer p.copyright{margin-top:8px;opacity:.7}
 <nav id="topnav">
   <div class="wrap">
     <img src="aaim.png" alt="Aaim">
-    <b>Aaim <span>Windows</span></b>
+    <b>Aaim <span>全网统一版</span></b>
     <div class="links">
       <a class="opt" href="#do">能做什么</a>
       <a class="opt" href="#layers">四层控制</a>
@@ -336,7 +342,7 @@ footer p.copyright{margin-top:8px;opacity:.7}
   </div>
   <div class="wrap">
     <img class="icon" src="aaim.png" alt="Aaim 图标">
-    <div class="badge"><svg class="i"><use href="#i-window"/></svg>Windows 10 / 11 · 下载即用 · 数据留本机</div>
+    <div class="badge"><svg class="i"><use href="#i-window"/></svg>全网统一版 · Windows 10 / 11 · 数据留本机</div>
     <h1>大多数软件操作<br><span class="grad">交给 Aaim</span></h1>
     <p class="lead">
       Aaim 常驻桌面，能看屏幕、点按钮、跑脚本、调接口。
@@ -352,7 +358,7 @@ footer p.copyright{margin-top:8px;opacity:.7}
       <div><b>轻</b>不折腾环境</div>
       <div><b>本机</b>数据留在电脑</div>
     </div>
-    <div class="ver">v1.0.0 · Windows 10 / 11（64 位）· 安装包分两个分卷</div>
+    <div class="ver">v1.0.1113.2336 · Windows 10 / 11（64 位）· 安装包分两个分卷</div>
   </div>
 </header>
 
@@ -471,26 +477,31 @@ footer p.copyright{margin-top:8px;opacity:.7}
       <div class="k">Download</div>
       <h2>三步开工</h2>
       <p>Windows 10 / 11（64 位）。两个文件都要下载，安装后填一次 Key 就能用。蓝奏云打不开时，用下方的移动云盘备用链接。</p>
+      <div class="platrow">
+        <span class="cur"><svg class="i"><use href="#i-window"/></svg>Windows · 当前页</span>
+        <a href="https://lugui906.github.io/aaiml/" target="_blank" rel="noopener"><svg class="i"><use href="#i-terminal"/></svg>Linux 版</a>
+        <a href="https://lugui906.github.io/aaima/" target="_blank" rel="noopener"><svg class="i"><use href="#i-phone"/></svg>安卓版</a>
+      </div>
     </div>
     <div class="dl-grid">
       <div class="dl-card">
         <div class="dl-head"><span class="part">主文件</span></div>
-        <div class="dl-name">Aaim.zip</div>
-        <p class="dl-hint">保持原名，解压这个文件</p>
+        <div class="dl-name">aaim-11.14.zip</div>
+        <p class="dl-hint">保持原名，解压这个文件 · 86.0 MB</p>
         <div class="dl-actions">
-          <span class="pwd">密码 <b>fnz0</b></span>
-          <button class="copy" type="button" data-copy="fnz0" data-label="复制密码">复制密码</button>
-          <a class="dl-btn" href="https://wwaye.lanzoue.com/i7TOt4czzqtc" target="_blank" rel="noopener" aria-label="下载 Aaim.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
+          <span class="pwd">密码 <b>7fq9</b></span>
+          <button class="copy" type="button" data-copy="7fq9" data-label="复制密码">复制密码</button>
+          <a class="dl-btn" href="https://wwaye.lanzoue.com/i7efE4fv3buf" target="_blank" rel="noopener" aria-label="下载 aaim-11.14.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
         </div>
       </div>
       <div class="dl-card">
         <div class="dl-head"><span class="part warn">需要重命名</span></div>
-        <div class="dl-name">Aaim2.zip</div>
-        <p class="dl-hint">下载后重命名为 <code>Aaim.z01</code></p>
+        <div class="dl-name">aaim-11.14-2.zip</div>
+        <p class="dl-hint">下载后重命名为 <code>aaim-11.14.z01</code> · 99.0 MB</p>
         <div class="dl-actions">
-          <span class="pwd">密码 <b>3bz5</b></span>
-          <button class="copy" type="button" data-copy="3bz5" data-label="复制密码">复制密码</button>
-          <a class="dl-btn" href="https://wwaye.lanzoue.com/i7Ewz4czzrdc" target="_blank" rel="noopener" aria-label="下载 Aaim2.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
+          <span class="pwd">密码 <b>ghur</b></span>
+          <button class="copy" type="button" data-copy="ghur" data-label="复制密码">复制密码</button>
+          <a class="dl-btn" href="https://wwaye.lanzoue.com/iohCZ4fv3dna" target="_blank" rel="noopener" aria-label="下载 aaim-11.14-2.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
         </div>
       </div>
     </div>
@@ -500,26 +511,26 @@ footer p.copyright{margin-top:8px;opacity:.7}
       <div>
         <b>备用通道 · 中国移动云盘</b>
         <p>蓝奏云打不开时走这里。复制链接后用手机打开「中国移动云盘」App，操作更方便哦。</p>
-        <p class="url">https://yun.139.com/shareweb/#/w/i/2yA8H2ssVho6h</p>
+        <p class="url">https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp</p>
       </div>
       <div class="mirror-act">
-        <button class="copy" type="button" data-copy="https://yun.139.com/shareweb/#/w/i/2yA8H2ssVho6h" data-label="复制链接">复制链接</button>
-        <a class="dl-btn" href="https://yun.139.com/shareweb/#/w/i/2yA8H2ssVho6h" target="_blank" rel="noopener" aria-label="打开中国移动云盘分享链接">去云盘<svg class="i"><use href="#i-download"/></svg></a>
+        <button class="copy" type="button" data-copy="https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp" data-label="复制链接">复制链接</button>
+        <a class="dl-btn" href="https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp" target="_blank" rel="noopener" aria-label="打开中国移动云盘分享链接">去云盘<svg class="i"><use href="#i-download"/></svg></a>
       </div>
     </div>
 
     <div class="rename">
       <div class="warn-ico"><svg class="i"><use href="#i-warn"/></svg></div>
       <div>
-        <b>重要：把 Aaim2.zip 重命名为 Aaim.z01</b>
-        <p>两个文件放在同一个文件夹。把 <code>Aaim2.zip</code> 改名为 <code>Aaim.z01</code>，保持 <code>Aaim.zip</code> 不变，然后解压 <code>Aaim.zip</code>。</p>
-        <p class="small">如果看不到扩展名，先在资源管理器里打开「文件扩展名」，确保最终文件名是 <code>Aaim.z01</code>，而不是 <code>Aaim.z01.zip</code>。</p>
+        <b>重要：把 aaim-11.14-2.zip 重命名为 aaim-11.14.z01</b>
+        <p>两个文件放在同一个文件夹。把 <code>aaim-11.14-2.zip</code> 改名为 <code>aaim-11.14.z01</code>，保持 <code>aaim-11.14.zip</code> 不变，然后解压 <code>aaim-11.14.zip</code>。</p>
+        <p class="small">如果看不到扩展名，先在资源管理器里打开「文件扩展名」，确保最终文件名是 <code>aaim-11.14.z01</code>，而不是 <code>aaim-11.14.z01.zip</code>。</p>
       </div>
     </div>
 
     <div class="steps">
-      <div class="step"><div class="n">1</div><div><b>下载两个文件</b><p>上面的 Aaim.zip 和 Aaim2.zip 都要下载，密码分别是 <code>fnz0</code> 和 <code>3bz5</code>。</p></div></div>
-      <div class="step"><div class="n">2</div><div><b>改名、解压</b><p>Aaim2.zip → Aaim.z01；解压 Aaim.zip，得到 <code>aaim-1.0.0-x64.msi</code>。</p></div></div>
+      <div class="step"><div class="n">1</div><div><b>下载两个文件</b><p>上面的 aaim-11.14.zip 和 aaim-11.14-2.zip 都要下载，密码分别是 <code>7fq9</code> 和 <code>ghur</code>。</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>改名、解压</b><p>aaim-11.14-2.zip → aaim-11.14.z01；解压 aaim-11.14.zip，得到 <code>aaim-1.0.0-x64.msi</code>。</p></div></div>
       <div class="step"><div class="n">3</div><div><b>安装、填 Key</b><p>双击安装包，启动 Aaim，在设置里填接口地址和 API Key，开始用。按当前用户安装，不需要管理员权限。</p></div></div>
     </div>
     <p class="note">建议用 7-Zip 或 WinRAR 解压；解压前，两个文件必须放在同一个文件夹。</p>
@@ -541,6 +552,8 @@ footer p.copyright{margin-top:8px;opacity:.7}
     <div class="socials">
       <a class="pill" href="#download"><svg class="i"><use href="#i-download"/></svg>下载 Aaim</a>
       <a class="pill" href="https://github.com/lugui906/aaimw" target="_blank" rel="noopener"><svg class="i f"><use href="#i-github"/></svg>GitHub · lugui906/aaimw</a>
+      <a class="pill" href="https://lugui906.github.io/aaiml/" target="_blank" rel="noopener"><svg class="i"><use href="#i-terminal"/></svg>Linux 版</a>
+      <a class="pill" href="https://lugui906.github.io/aaima/" target="_blank" rel="noopener"><svg class="i"><use href="#i-phone"/></svg>安卓版</a>
       <a class="pill" href="#top"><svg class="i"><use href="#i-up"/></svg>回到顶部</a>
     </div>
     <p>Aaim · Windows 版 —— 把大部分软件操作交给 AI</p>
