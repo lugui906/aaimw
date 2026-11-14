@@ -30,7 +30,7 @@
   "alternateName": "Aaim Windows 版",
   "url": "https://lugui906.github.io/aaimw/",
   "image": "https://lugui906.github.io/aaimw/aaim.png",
-  "softwareVersion": "1.0.1113.2336",
+  "softwareVersion": "1.0.0",
   "operatingSystem": "Windows 10, Windows 11, Linux, Android",
   "applicationCategory": "BusinessApplication",
   "inLanguage": "zh-CN",
@@ -214,6 +214,7 @@ section{padding:64px 0}
 .platrow .cur{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;border-color:transparent;font-weight:600}
 .platrow .i{width:15px;height:15px}
 .dl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dl-grid.one{grid-template-columns:minmax(0,620px);justify-content:center}
 .dl-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--sh-sm);transition:.25s}
 .dl-card:hover{border-color:rgba(30,136,229,.45);box-shadow:var(--sh)}
 .dl-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -358,7 +359,7 @@ footer p.copyright{margin-top:8px;opacity:.7}
       <div><b>轻</b>不折腾环境</div>
       <div><b>本机</b>数据留在电脑</div>
     </div>
-    <div class="ver">v1.0.1113.2336 · Windows 10 / 11（64 位）· 安装包分两个分卷</div>
+    <div class="ver">Windows 10 / 11（64 位）· 单个 MSI 安装包 · 185 MB</div>
   </div>
 </header>
 
@@ -475,33 +476,23 @@ footer p.copyright{margin-top:8px;opacity:.7}
   <div class="wrap">
     <div class="sec-head">
       <div class="k">Download</div>
-      <h2>三步开工</h2>
-      <p>Windows 10 / 11（64 位）。两个文件都要下载，安装后填一次 Key 就能用。蓝奏云打不开时，用下方的移动云盘备用链接。</p>
+      <h2>一步下载，双击就能装</h2>
+      <p>Windows 10 / 11（64 位）。云盘里是一个完整的 MSI 安装包，下载后直接双击安装：不用解压、不用改名、没有压缩密码。</p>
       <div class="platrow">
         <span class="cur"><svg class="i"><use href="#i-window"/></svg>Windows · 当前页</span>
         <a href="https://lugui906.github.io/aaiml/" target="_blank" rel="noopener"><svg class="i"><use href="#i-terminal"/></svg>Linux 版</a>
         <a href="https://lugui906.github.io/aaima/" target="_blank" rel="noopener"><svg class="i"><use href="#i-phone"/></svg>安卓版</a>
       </div>
     </div>
-    <div class="dl-grid">
+
+    <div class="dl-grid one">
       <div class="dl-card">
-        <div class="dl-head"><span class="part">主文件</span></div>
-        <div class="dl-name">aaim-11.14.zip</div>
-        <p class="dl-hint">保持原名，解压这个文件 · 86.0 MB</p>
+        <div class="dl-head"><span class="part">推荐</span><span class="size">185.02 MB · x64</span></div>
+        <div class="dl-name">aaim-1.0.0-x64_20261115_003018.msi</div>
+        <p class="dl-hint">完整安装包，下载完双击即装。安装包里已经打包好 Python 与 Java 运行时，目标机不用另装任何依赖。按当前用户安装，不需要管理员权限。</p>
         <div class="dl-actions">
-          <span class="pwd">密码 <b>7fq9</b></span>
-          <button class="copy" type="button" data-copy="7fq9" data-label="复制密码">复制密码</button>
-          <a class="dl-btn" href="https://wwaye.lanzoue.com/i7efE4fv3buf" target="_blank" rel="noopener" aria-label="下载 aaim-11.14.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
-        </div>
-      </div>
-      <div class="dl-card">
-        <div class="dl-head"><span class="part warn">需要重命名</span></div>
-        <div class="dl-name">aaim-11.14-2.zip</div>
-        <p class="dl-hint">下载后重命名为 <code>aaim-11.14.z01</code> · 99.0 MB</p>
-        <div class="dl-actions">
-          <span class="pwd">密码 <b>ghur</b></span>
-          <button class="copy" type="button" data-copy="ghur" data-label="复制密码">复制密码</button>
-          <a class="dl-btn" href="https://wwaye.lanzoue.com/iohCZ4fv3dna" target="_blank" rel="noopener" aria-label="下载 aaim-11.14-2.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
+          <span class="pwd">中国移动云盘 · 无需提取码</span>
+          <a class="dl-btn" href="https://yun.139.com/shareweb/#/w/i/2yA8G1nZmxRxh" target="_blank" rel="noopener" aria-label="打开中国移动云盘分享下载 MSI">下载<svg class="i"><use href="#i-download"/></svg></a>
         </div>
       </div>
     </div>
@@ -509,31 +500,46 @@ footer p.copyright{margin-top:8px;opacity:.7}
     <div class="mirror">
       <div class="mirror-ico"><svg class="i"><use href="#i-cloud"/></svg></div>
       <div>
-        <b>备用通道 · 中国移动云盘</b>
-        <p>蓝奏云打不开时走这里。复制链接后用手机打开「中国移动云盘」App，操作更方便哦。</p>
-        <p class="url">https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp</p>
+        <b>下载通道 · 中国移动云盘</b>
+        <p>这个分享里只有 1 个文件：<code>aaim-1.0.0-x64_20261115_003018.msi</code>（185.02 MB），2026-11-15 上传，长期有效。</p>
+        <p class="url">https://yun.139.com/shareweb/#/w/i/2yA8G1nZmxRxh</p>
       </div>
       <div class="mirror-act">
-        <button class="copy" type="button" data-copy="https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp" data-label="复制链接">复制链接</button>
-        <a class="dl-btn" href="https://yun.139.com/shareweb/#/w/i/2yA8FpkhU5Uyp" target="_blank" rel="noopener" aria-label="打开中国移动云盘分享链接">去云盘<svg class="i"><use href="#i-download"/></svg></a>
+        <button class="copy" type="button" data-copy="https://yun.139.com/shareweb/#/w/i/2yA8G1nZmxRxh" data-label="复制链接">复制链接</button>
+        <a class="dl-btn" href="https://yun.139.com/shareweb/#/w/i/2yA8G1nZmxRxh" target="_blank" rel="noopener" aria-label="打开中国移动云盘分享链接">去云盘<svg class="i"><use href="#i-download"/></svg></a>
       </div>
     </div>
 
     <div class="rename">
       <div class="warn-ico"><svg class="i"><use href="#i-warn"/></svg></div>
       <div>
-        <b>重要：把 aaim-11.14-2.zip 重命名为 aaim-11.14.z01</b>
-        <p>两个文件放在同一个文件夹。把 <code>aaim-11.14-2.zip</code> 改名为 <code>aaim-11.14.z01</code>，保持 <code>aaim-11.14.zip</code> 不变，然后解压 <code>aaim-11.14.zip</code>。</p>
-        <p class="small">如果看不到扩展名，先在资源管理器里打开「文件扩展名」，确保最终文件名是 <code>aaim-11.14.z01</code>，而不是 <code>aaim-11.14.z01.zip</code>。</p>
+        <b>安装时可能提示「未知发布者」</b>
+        <p>安装包暂未做代码签名，Windows SmartScreen 会拦一下。点「更多信息」→「仍要运行」继续安装即可。</p>
+        <p class="small">卸载走「设置 → 应用 → Aaim」；卸载不会删除 <code>%USERPROFILE%\.aaim</code> 里的配置、历史与记忆。</p>
       </div>
     </div>
 
     <div class="steps">
-      <div class="step"><div class="n">1</div><div><b>下载两个文件</b><p>上面的 aaim-11.14.zip 和 aaim-11.14-2.zip 都要下载，密码分别是 <code>7fq9</code> 和 <code>ghur</code>。</p></div></div>
-      <div class="step"><div class="n">2</div><div><b>改名、解压</b><p>aaim-11.14-2.zip → aaim-11.14.z01；解压 aaim-11.14.zip，得到 <code>aaim-1.0.0-x64.msi</code>。</p></div></div>
-      <div class="step"><div class="n">3</div><div><b>安装、填 Key</b><p>双击安装包，启动 Aaim，在设置里填接口地址和 API Key，开始用。按当前用户安装，不需要管理员权限。</p></div></div>
+      <div class="step"><div class="n">1</div><div><b>下载安装包</b><p>打开上面的中国移动云盘链接，下载那个唯一的 <code>.msi</code> 文件（185.02 MB）。没有分卷，也不需要提取码。</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>双击安装</b><p>一路下一步；遇到 SmartScreen 提示就点「更多信息 → 仍要运行」。按当前用户安装，不需要管理员权限。</p></div></div>
+      <div class="step"><div class="n">3</div><div><b>开就能用</b><p>装好启动 Aaim，在设置里填接口地址和 API Key 就能开始用。</p></div></div>
     </div>
-    <p class="note">建议用 7-Zip 或 WinRAR 解压；解压前，两个文件必须放在同一个文件夹。</p>
+
+    <div class="mirror">
+      <div class="mirror-ico"><svg class="i"><use href="#i-folder"/></svg></div>
+      <div>
+        <b>备用通道 · 蓝奏云（分两个分卷）</b>
+        <p>云盘链接打不开时走这里：对同一个 MSI 拆成了两个分卷，需要解压并改名。</p>
+        <p class="small">主文件 <code>aaim-11.14.zip</code>（86.0 MB，密码 <code>7fq9</code>）；分卷 <code>aaim-11.14-2.zip</code>（99.0 MB，密码 <code>ghur</code>）下载后改名为 <code>aaim-11.14.z01</code>，两个文件放同一文件夹，解压 <code>aaim-11.14.zip</code>。</p>
+      </div>
+      <div class="mirror-act">
+        <button class="copy" type="button" data-copy="7fq9" data-label="复制密码">主文件密码</button>
+        <a class="dl-btn" href="https://wwaye.lanzoue.com/i7efE4fv3buf" target="_blank" rel="noopener" aria-label="下载 aaim-11.14.zip">下载<svg class="i"><use href="#i-download"/></svg></a>
+        <a class="dl-btn" href="https://wwaye.lanzoue.com/iohCZ4fv3dna" target="_blank" rel="noopener" aria-label="下载分卷 aaim-11.14-2.zip">分卷<svg class="i"><use href="#i-download"/></svg></a>
+      </div>
+    </div>
+
+    <p class="note">不需要解压、不需要 7-Zip、不需要密码。安装包内置 Python 与 Java 运行时，目标机不用另装依赖。</p>
   </div>
 </section>
 
